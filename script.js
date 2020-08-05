@@ -20,7 +20,7 @@ $(document).ready(function() {
   function searchWeather(searchValue) {
     $.ajax({
       type: "GET",
-      url: "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=8337c9967573e14ada129e51effa9dea",
+      url: "https://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=8337c9967573e14ada129e51effa9dea",
       dataType: "json",
       success: function(data) {
         console.log("----------City Search--------", data);
@@ -77,7 +77,7 @@ $(document).ready(function() {
   function getForecast(searchValue) {
     $.ajax({
       type: "GET",
-      url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=8337c9967573e14ada129e51effa9dea",
+      url: "https://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=8337c9967573e14ada129e51effa9dea",
       dataType: "json",
       success: function(data) {
         console.log("----------Forecast Search--------", data);
@@ -108,7 +108,7 @@ $(document).ready(function() {
   function getUVIndex(lat, lon) {
     $.ajax({
       type: "GET",
-      url: "http://api.openweathermap.org/data/2.5/uvi?appid=8337c9967573e14ada129e51effa9dea" + "&lat=" + lat + "&lon=" + lon,
+      url: "https://api.openweathermap.org/data/2.5/uvi?appid=8337c9967573e14ada129e51effa9dea" + "&lat=" + lat + "&lon=" + lon,
       dataType: "json",
       success: function(data) {
         console.log("-----UV Search------", data);
